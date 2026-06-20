@@ -11,7 +11,7 @@ const Navbar = () => {
     <nav
       className={
         Theam == "dark"
-          ? "lg:h-[15vh] md:h-[10vh] sm:h-[8vh] md:bg-red-400 sm:bg-green-400  bg-yellow-400 px-2 md:px-17 sm:px-7 flex justify-between items-center pt-6 text-white bg-[#1c1c1c]"
+          ? "lg:h-[15vh] md:h-[10vh] sm:h-[8vh]  px-2 md:px-17 sm:px-7 flex justify-between items-center pt-6 text-white bg-[#1c1c1c]"
           : "lg:h-[15vh] md:h-[10vh] sm:h-[8vh] px-18 flex justify-between items-center pt-6 text-bhack bg-[#faf7f0]"
       }
     >
