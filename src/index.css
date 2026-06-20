@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+#textarea::-webkit-scrollbar {
+  display: none;
+}
+#specalfont {
+  font-family: "Space Grotesk", sans-serif;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+#videoscrollcard::-webkit-scrollbar {
+  display: none;
+}
+
+#creator_name {
+  font-family: "Sora", sans-serif;
+  font-weight: 700;
+}
+
+#hello_text {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 400;
+}
