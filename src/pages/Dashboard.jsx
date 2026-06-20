@@ -26,7 +26,7 @@ const Dashboard = () => {
   // const totalVideos = myIdeas.length;
 
   return (
-    <div className="h-screen w-full">
+    <div className="h-screen w-screen ">
       <div>
         <Navbar />
 

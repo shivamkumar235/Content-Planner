@@ -23,6 +23,8 @@ const Login = () => {
       alert("You are already registered!");
       navigate("/Dashboard");
       return;
+    } else {
+      console.log("no");
     }
   };
 
@@ -32,7 +34,7 @@ const Login = () => {
         onSubmit={(e) => {
           loginFormSubmitted(e);
         }}
-        className="w-[28%] flex flex-col gap-5 p-12 border-4 bg-[#2222] border-emerald-700 rounded-3xl "
+        className="lg:w-[28vw] md:w-[25%] sm:w-[10vw]  flex flex-col gap-5 p-12 border-4 bg-[#2222] border-emerald-700 rounded-3xl "
       >
         <input
           className="px-5 py-3 mt-2 rounded-3xl text-xl bg-transparent text-white border-2 outline-none placeholder:text-gray-200 border-emerald-500"

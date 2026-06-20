@@ -8,7 +8,10 @@ const LoginBtn = () => {
           <Link to={"/"}>Register</Link>
         </span>
       </p>
-      <button className="bg-emerald-300 active:scale-95  hover:cursor-pointer mt-1 w-full text-xl font-semibold p-3 rounded-3xl ">
+      <button
+        type="submit"
+        className="bg-emerald-300 active:scale-95  hover:cursor-pointer mt-1 w-full text-xl font-semibold p-3 rounded-3xl "
+      >
         Login
       </button>
     </div>

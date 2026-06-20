@@ -11,12 +11,15 @@ const Navbar = () => {
     <nav
       className={
         Theam == "dark"
-          ? "h-[15vh] px-18 flex justify-between items-center pt-6 text-white bg-[#1c1c1c]"
-          : "h-[15vh] px-18 flex justify-between items-center pt-6 text-bhack bg-[#faf7f0]"
+          ? "lg:h-[15vh] md:h-[10vh] sm:h-[8vh] md:bg-red-400 sm:bg-green-400  bg-yellow-400 px-2 md:px-17 sm:px-7 flex justify-between items-center pt-6 text-white bg-[#1c1c1c]"
+          : "lg:h-[15vh] md:h-[10vh] sm:h-[8vh] px-18 flex justify-between items-center pt-6 text-bhack bg-[#faf7f0]"
       }
     >
       <div className="">
-        <h1 id="hello_text" className="text-xl text-[#afafb8] font-bold">
+        <h1
+          id="hello_text"
+          className="md:text-[1.7vw] text-[4vw]   text-[#afafb8] font-bold"
+        >
           Hello{" "}
           <span onClick={changeTheam} className="cursor-pointer text-[1.1vw]">
             {Theam == "dark" ? "☀️" : "🌙"}
@@ -25,8 +28,8 @@ const Navbar = () => {
             id="creator_name"
             className={
               Theam == "dark"
-                ? "text-4xl font-Outfit capitalize text-[#ffffff]"
-                : "text-4xl font-Outfit capitalize text-[#1c1c1c]"
+                ? "text-xl md:text-4xl sm:text-2xl  font-Outfit capitalize text-[#ffffff]"
+                : "text-xl md:text-4xl sm:text-2xl font-Outfit capitalize text-[#1c1c1c]"
             }
           >
             {user?.Regname}👋
@@ -34,17 +37,29 @@ const Navbar = () => {
         </h1>
       </div>
 
-      <div className="flex gap-12 pt-7 text-md font-semibold">
-        <Link className="text-[1.1vw]" to={"/Dashboard"}>
+      <div className="flex  gap-3 sm:gap-8 md:gap-10 lg:gap-12 pt-7 text-md font-semibold">
+        <Link
+          className="text-[2.2vw] sm:text-[1.1vw] md:text-[1.1vw] lg:text-[1.1vw]"
+          to={"/Dashboard"}
+        >
           Dashboard
         </Link>
-        <Link to={"/Allcontents"} className="text-[1.1vw]">
+        <Link
+          to={"/Allcontents"}
+          className="text-[2.2vw] sm:text-[1.1vw] md:text-[1.1vw] lg:text-[1.1vw]"
+        >
           All Contents
         </Link>
-        <Link className="text-[1.1vw]" to={"/Addcontent"}>
+        <Link
+          className="text-[2.2vw] sm:text-[1.1vw] md:text-[1.1vw] lg:text-[1.1vw]"
+          to={"/Addcontent"}
+        >
           +Add Content
         </Link>
-        <Link className="text-[1.1vw] hover:text-red-500" to={"/"}>
+        <Link
+          className="text-[2.2vw] sm:text-[1.1vw] md:text-[1.1vw] lg:text-[1.1vw] hover:text-red-500"
+          to={"/"}
+        >
           Log out
         </Link>
       </div>

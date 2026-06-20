@@ -10,7 +10,9 @@
 body::-webkit-scrollbar {
   display: none;
 }
-
+body {
+  width: 100%;
+}
 #videoscrollcard::-webkit-scrollbar {
   display: none;
 }

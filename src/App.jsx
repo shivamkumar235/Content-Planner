@@ -10,7 +10,7 @@ import HeroEditvideo from "./pages/HeroEditvideo";
 
 const App = () => {
   return (
-    <div>
+    <div className="w-full">
       <Routes>
         <Route path="/" element={<Register />} />
         <Route path="/Login" element={<Login />} />
