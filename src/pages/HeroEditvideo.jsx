@@ -7,13 +7,9 @@ const HeroEditvideo = () => {
   const [Theam] = useContext(providecontext);
 
   return (
-    <div className="h-screen w-full">
+    <div className="h-screen  w-full">
       <Navbar />
-      <div
-        className={
-          Theam == "dark" ? "bg-[#1c1c1c] h-screen" : "bg-[#faf7f0] h-screen"
-        }
-      >
+      <div className={Theam == "dark" ? "bg-[#1c1c1c] " : "bg-[#faf7f0] "}>
         <h1
           className={
             Theam == "dark"
@@ -24,7 +20,7 @@ const HeroEditvideo = () => {
           Edit old content.
         </h1>
         <div className="w-full flex justify-center mt-5 ">
-          <div className=" w-[92vw] flex gap-10 text-white ">
+          <div className=" w-[92vw] pb-8 flex gap-10 text-white ">
             <HeroEditvideoLef />
           </div>
         </div>

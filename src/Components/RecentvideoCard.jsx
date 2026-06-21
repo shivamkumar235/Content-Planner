@@ -57,8 +57,8 @@ const RecentvideoCard = (propes) => {
     <div
       className={
         Theam == "dark"
-          ? `w-[22vw] rounded-3xl p-8 bg-[#262626] border-2 flex flex-col justify-between ${setMainBorder} border-[#3a3a3a]`
-          : `w-[22vw] rounded-3xl p-8 bg-[#ffffff] border-2 flex flex-col justify-between ${setMainBorder} border-[#e0ded8]`
+          ? `w-[100%] min-h-[340px] rounded-3xl p-8 flex flex-col justify-between bg-[#262626] border-2 flex flex-col justify-between ${setMainBorder} border-[#3a3a3a]`
+          : `w-[100%] min-h-[340px] rounded-3xl p-8 flex flex-col justify-between bg-[#262626] border-2 flex flex-col justify-between ${setMainBorder} border-[#e0ded8]`
       }
     >
       <div>

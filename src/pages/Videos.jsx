@@ -27,7 +27,7 @@ const Videos = () => {
         }
       >
         <div className=" flex justify-center pt-10  w-full">
-          <div className="w-[92vw] flex flex-wrap gap-x-4 gap-y-5 gap-10">
+          <div className=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 flex justify-center gap-4">
             {myIdeas.map((elem, idx) => {
               return (
                 <VideosCard

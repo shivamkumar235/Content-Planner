@@ -1,39 +1,29 @@
-import { useContext, useEffect, useState } from "react";
-import AddvideoRightplatform from "./AddvideoRightplatform";
-import AddvideoRightpriority from "./AddvideoFightpriority";
+import { useContext, useState } from "react";
+// import AddvideoRightplatform from "./AddvideoRightplatform";
+// import AddvideoRightpriority from "./AddvideoFightpriority";
 import { RiLightbulbFlashLine } from "@remixicon/react";
 import { providecontext } from "../pages/Contextprovider";
 import { useNavigate } from "react-router-dom";
+import Editvideoplatform from "./Editvideoplatform";
+import Editvideopriority from "./Editvideopriority";
 
 const HeroEditvideoLef = () => {
   const navigate = useNavigate();
+  const editData = JSON.parse(localStorage.getItem("editVideo"));
 
   const [Theam] = useContext(providecontext);
-  const [TITLE, setTITLE] = useState("");
-  const [discription, setDescription] = useState("");
-  const [cotegory, setcotegory] = useState("Vlog");
-  const [status, setStatus] = useState("Idea");
-  const [youtube, setYoutube] = useState("");
-  const [instagram, setinstagram] = useState("");
-  const [facebook, setfacebook] = useState("");
-  const [priority, setpriority] = useState("Low");
+  const [TITLE, setTITLE] = useState(editData.title);
+  const [discription, setDescription] = useState(editData.discription);
+  const [cotegory, setcotegory] = useState(editData.cotegory);
+  const [status, setStatus] = useState(editData.status);
+  const [youtube, setYoutube] = useState(editData.youtube);
+  const [instagram, setinstagram] = useState(editData.instagram);
+  const [facebook, setfacebook] = useState(editData.facebook);
+  const [priority, setpriority] = useState(editData.priority);
   const current = new Date();
   const date = `${current.getDate()}/${current.getMonth() + 1}/${current.getFullYear()}`;
 
-  useEffect(() => {
-    const editData = JSON.parse(localStorage.getItem("editVideo"));
-
-    if (editData) {
-      setTITLE(editData.title || "");
-      setDescription(editData.discription || "");
-      setStatus(editData.status || "");
-      setcotegory(editData.cotegory || "");
-      setpriority(editData.priority || "");
-      setYoutube(editData.youtube || false);
-      setinstagram(editData.instagram || false);
-      setfacebook(editData.facebook || false);
-    }
-  }, []);
+  console.log(editData.priority);
 
   const formsubmit = (e) => {
     e.preventDefault();
@@ -49,8 +39,7 @@ const HeroEditvideoLef = () => {
       cotegory,
       status,
       youtube,
-      instagram,
-      facebook,
+
       priority,
       date,
     };
@@ -61,6 +50,8 @@ const HeroEditvideoLef = () => {
     setDescription("");
     setStatus("");
     setYoutube("");
+    setinstagram("");
+    setfacebook("");
     localStorage.removeItem("editIndex");
 
     // navigate("/Allcontent");
@@ -71,13 +62,13 @@ const HeroEditvideoLef = () => {
       onSubmit={(e) => {
         formsubmit(e);
       }}
-      className="flex w-full gap-6"
+      className="flex flex-col lg:flex-row  w-full gap-6"
     >
       <div
         className={
           Theam == "dark"
-            ? "bg-[#262626] border-3 rounded-2xl border-[#3a3a3a] p-8 flex flex-col w-1/2"
-            : "bg-[#ffffff] border-3 rounded-2xl border-[#e0ded8] p-8 flex flex-col w-1/2"
+            ? "bg-[#262626] border-3 rounded-2xl border-[#3a3a3a] p-8 flex flex-col w-full lg:w-1/2"
+            : "bg-[#ffffff] border-3 rounded-2xl border-[#e0ded8] p-8 flex flex-col w-full lg:w-1/2"
         }
       >
         <p className="text-[#858592]">
@@ -131,14 +122,14 @@ const HeroEditvideoLef = () => {
             id="textarea"
             className={
               Theam == "dark"
-                ? "bg-[#ffffff] font-semibold  rounded-xl px-3 py-2 h-[8vw] outline-none text-[#000000] w-full"
-                : "bg-[#ffffff] font-semibold border-2 border-[#bbbbbb]  rounded-xl px-3 py-2 h-[8vw] outline-none text-[#000000] w-full"
+                ? "bg-[#ffffff] font-semibold  rounded-xl px-3 py-2 min-h-[120px] outline-none text-[#000000] w-full"
+                : "bg-[#ffffff] font-semibold border-2 border-[#bbbbbb]  rounded-xl px-3 py-2 min-h-[120px] outline-none text-[#000000] w-full"
             }
             cols="15"
           ></textarea>
         </div>
         <div className="w-full mt-12 flex gap-7 justify-between ">
-          <div className="w-1/2">
+          <div className="w-full lg:w-1/2">
             <p
               className={
                 Theam == "dark"
@@ -174,7 +165,7 @@ const HeroEditvideoLef = () => {
             </select>
           </div>
 
-          <div className="w-1/2">
+          <div className="w-full sm:w-1/2">
             {" "}
             <p
               className={
@@ -210,7 +201,7 @@ const HeroEditvideoLef = () => {
         </div>
       </div>
 
-      <div className=" w-1/2 ">
+      <div className="w-full lg:w-1/2 ">
         <div
           className={
             Theam == "dark"
@@ -233,12 +224,12 @@ const HeroEditvideoLef = () => {
             more details later.
           </p>
         </div>
-        <AddvideoRightplatform
-          setYoutube={setYoutube}
-          setinstagram={setinstagram}
-          setfacebook={setfacebook}
+        <Editvideoplatform
+          youtube={youtube}
+          instagram={instagram}
+          facebook={facebook}
         />
-        <AddvideoRightpriority setpriority={setpriority} />
+        <Editvideopriority setpriority={setpriority} priority={priority} />
         <button
           type="submit"
           onClick={() => {

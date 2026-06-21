@@ -31,9 +31,9 @@ const Dashboard = () => {
         <Navbar />
 
         <div className={Theam == "dark" ? "bg-[#1c1c1c]" : "bg-[#faf7f0]"}>
-          <div className="h-[85vh] flex flex-col items-center">
-            <div className="  w-[92vw] pt-5 flex justify-between gap-3 h-35">
-              <div className="h-full w-1/4 rounded-3xl flex justify-center gap-2 text-2xl pl-9 flex-col bg-emerald-500">
+          <div className=" flex flex-col items-center">
+            <div className="  w-[92vw] pt-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+              <div className="rounded-3xl min-h-[120px] flex justify-center gap-2 text-2xl pl-9 flex-col bg-emerald-500">
                 <p className="text-5xl font-bold text-[#F8FAFC]">
                   {totalvideos}
                 </p>
@@ -41,17 +41,17 @@ const Dashboard = () => {
                   Total Videos
                 </h2>
               </div>
-              <div className="h-full w-1/4 rounded-3xl flex justify-center gap-2 text-2xl pl-9 flex-col bg-cyan-500">
+              <div className="rounded-3xl min-h-[120px] flex justify-center gap-2 text-2xl pl-9 flex-col bg-cyan-500">
                 <p className="text-5xl font-bold text-[#F8FAFC]">{ideacount}</p>
                 <h2 className="text-[#F8FAFC] text-2xl font-bold">Ideas</h2>
               </div>
-              <div className="h-full w-1/4 rounded-3xl flex justify-center gap-2 text-2xl pl-9 flex-col bg-yellow-400">
+              <div className="rounded-3xl min-h-[120px] flex justify-center gap-2 text-2xl pl-9 flex-col bg-yellow-400">
                 <p className="text-5xl font-bold text-[#F8FAFC]">
                   {editingdcount}
                 </p>
                 <h2 className="text-[#F8FAFC] text-2xl font-bold">Editing</h2>
               </div>
-              <div className="h-full w-1/4 rounded-3xl flex justify-center gap-2 text-2xl pl-9 flex-col bg-red-400">
+              <div className="rounded-3xl min-h-[120px] flex justify-center gap-2 text-2xl pl-9 flex-col bg-red-400">
                 <p className="text-5xl font-bold text-[#F8FAFC]">
                   {uploadcount}
                 </p>
@@ -69,7 +69,7 @@ const Dashboard = () => {
               <div className="pl-5">
                 <p className="mb-3  text-2xl">Your Recent videos </p>
               </div>
-              <div className="w-[92vw] flex flex-wrap   gap-x-4 gap-y-5 gap-10">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-items-center gap-4 ">
                 {recentcontent.map((elem, idx) => {
                   return (
                     <RecentvideoCard
@@ -107,7 +107,7 @@ const Dashboard = () => {
         <div
           className={
             Theam == "dark"
-              ? "bg-[#1c1c1c] flex justify-center h-screen"
+              ? "bg-[#1c1c1c] flex justify-center h-screen "
               : "bg-[#faf7f0] flex justify-center h-screen"
           }
         >
@@ -121,11 +121,12 @@ const Dashboard = () => {
             <div className="pl-5">
               <p className="mb-3  text-2xl">Some Importent Contents </p>
             </div>
+
             <div
               className={
                 Theam == "dark"
-                  ? "w-[92vw] flex flex-wrap bg-[#1c1c1c]   gap-x-4 gap-y-5 gap-10"
-                  : "w-[92vw] flex flex-wrap bg-[#faf7f0]   gap-x-4 gap-y-5 gap-10"
+                  ? " grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-items-center gap-4 "
+                  : " grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-items-center gap-4 "
               }
             >
               {highpriorityshow.map((elem, idx) => {

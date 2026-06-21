@@ -46,13 +46,13 @@ const HeroAddvideoLeft = () => {
       onSubmit={(e) => {
         formsubmit(e);
       }}
-      className="flex w-full gap-6"
+      className="flex pb-8 flex-col lg:flex-row w-full gap-6"
     >
       <div
         className={
           Theam == "dark"
-            ? "bg-[#262626] border-3 rounded-2xl border-[#3a3a3a] p-8 flex flex-col w-1/2"
-            : "bg-[#ffffff] border-3 rounded-2xl border-[#e0ded8] p-8 flex flex-col w-1/2"
+            ? "bg-[#262626] border-3 rounded-2xl border-[#3a3a3a] p-5 md:p-8 flex flex-col w-full lg:w-1/2"
+            : "bg-[#ffffff] border-3 rounded-2xl border-[#e0ded8] p-5 md:p-8 flex flex-col w-full lg:w-1/2"
         }
       >
         <p className="text-[#858592]">
@@ -106,14 +106,14 @@ const HeroAddvideoLeft = () => {
             id="textarea"
             className={
               Theam == "dark"
-                ? "bg-[#ffffff] font-semibold  rounded-xl px-3 py-2 h-[8vw] outline-none text-[#000000] w-full"
-                : "bg-[#ffffff] font-semibold border-2 border-[#bbbbbb]  rounded-xl px-3 py-2 h-[8vw] outline-none text-[#000000] w-full"
+                ? "bg-[#ffffff] font-semibold  rounded-xl px-3 py-2 h-32 md:h-40 outline-none text-[#000000] w-full"
+                : "bg-[#ffffff] font-semibold border-2 border-[#bbbbbb]  rounded-xl px-3 py-2 h-32 md:h-40 outline-none text-[#000000] w-full"
             }
             cols="15"
           ></textarea>
         </div>
-        <div className="w-full mt-12 flex gap-7 justify-between ">
-          <div className="w-1/2">
+        <div className="w-full mt-12 flex flex-col sm:flex-row gap-4 justify-between ">
+          <div className="w-full lg:w-1/2">
             <p
               className={
                 Theam == "dark"
@@ -149,7 +149,7 @@ const HeroAddvideoLeft = () => {
             </select>
           </div>
 
-          <div className="w-1/2">
+          <div className="w-full lg:w-1/2">
             {" "}
             <p
               className={
@@ -185,7 +185,7 @@ const HeroAddvideoLeft = () => {
         </div>
       </div>
 
-      <div className=" w-1/2 ">
+      <div className="  flex flex-col w-full lg:w-1/2 ">
         <div
           className={
             Theam == "dark"

@@ -69,8 +69,8 @@ const VideosCard = (propes) => {
     <div
       className={
         Theam == "dark"
-          ? `w-[22vw] rounded-3xl p-8 bg-[#262626] border-2 flex flex-col justify-between ${setMainBorder} border-[#3a3a3a]`
-          : `w-[22vw] rounded-3xl p-8 bg-[#ffffff] border-2 flex flex-col justify-between ${setMainBorder} border-[#e0ded8]`
+          ? `w-[83vw] min-h-[340px] sm:w-[40vw] lg:w-[22vw] xl:w-[22vw]  rounded-3xl p-8 bg-[#262626] border-2 flex flex-col justify-between ${setMainBorder} border-[#3a3a3a]`
+          : `w-[83vw] min-h-[340px]  sm:w-[40vw] lg:w-[22vw] xl:w-[22vw]  rounded-3xl p-8 bg-[#ffffff] border-2 flex flex-col justify-between ${setMainBorder} border-[#e0ded8]`
       }
     >
       <div>

@@ -6,11 +6,7 @@ const HeroAddvideo = () => {
   const [Theam] = useContext(providecontext);
 
   return (
-    <div
-      className={
-        Theam == "dark" ? "bg-[#1c1c1c] h-screen" : "bg-[#faf7f0] h-screen"
-      }
-    >
+    <div className={Theam == "dark" ? "bg-[#1c1c1c]" : "bg-[#faf7f0] "}>
       <h1
         className={
           Theam == "dark"
@@ -21,7 +17,7 @@ const HeroAddvideo = () => {
         Add new content.
       </h1>
       <div className="w-full flex justify-center mt-5 ">
-        <div className=" w-[92vw] flex gap-10 text-white ">
+        <div className=" w-[92vw] flex gap-10  text-white ">
           <HeroAddvideoLeft />
         </div>
       </div>
