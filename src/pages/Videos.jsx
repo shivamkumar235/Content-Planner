@@ -13,6 +13,8 @@ const Videos = () => {
 
   const myIdeas = ideas.filter((item) => item.email === currentUser.Regemail);
   // }, ["ideas"]);
+  const recentlength = myIdeas.length;
+  console.log(recentlength);
 
   return (
     <div className="h-screen w-full">
@@ -47,6 +49,15 @@ const Videos = () => {
                 />
               );
             })}
+          </div>
+
+          <div
+            style={{ display: recentlength == 0 ? "block" : "none" }}
+            className="w-[92vw] flex  gap-x-4 gap-y-5 gap-10"
+          >
+            <p className="text-center text-[#a1a1aa] text-[5vw] sm:text-2xl lg:text-2xl xl:text-2xl pt-12 pt-12">
+              You have no any content. Click on +add content!
+            </p>
           </div>
         </div>
       </div>

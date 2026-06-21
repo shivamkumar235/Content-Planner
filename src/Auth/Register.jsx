@@ -52,10 +52,10 @@ const Register = () => {
         onSubmit={(e) => {
           registerFormSubmitted(e);
         }}
-        className="lg:w-[28vw] md:w-[25%] sm:w-[10vw] flex flex-col gap-5 p-12 border-4 bg-[#2222] border-emerald-600 rounded-3xl "
+        className="lg:w-[28vw] md:w-[25%] sm:w-[10vw] w-[80%] flex flex-col gap-5 p-4 sm:p-12 lg:p-12 xl:p-12 border-4 bg-[#2222] border-emerald-600 rounded-3xl "
       >
         <input
-          className="px-3 py-3 mt-2 text-[#ffffff] rounded-3xl text-xl bg-transparent border-2 outline-none placeholder:text-gray-200 border-emerald-500"
+          className="px-3 sm:px-5 lg:px-5 cl:px-5 py-2 sm:py-3 lg:py-3 xl:py-3 mt-2 text-[#ffffff] rounded-3xl text-xl bg-transparent border-2 outline-none placeholder:text-gray-200 border-emerald-500"
           type="name"
           value={Regname}
           onChange={(e) => {
@@ -64,7 +64,7 @@ const Register = () => {
           placeholder="Enter Name"
         />
         <input
-          className="px-3 py-3 text-[#ffffff] mt-2 rounded-3xl text-xl bg-transparent border-2 outline-none placeholder:text-gray-200 border-emerald-500"
+          className="px-3 sm:px-5 lg:px-5 cl:px-5 py-2 sm:py-3 lg:py-3 xl:py-3 text-[#ffffff] mt-2 rounded-3xl text-xl bg-transparent border-2 outline-none placeholder:text-gray-200 border-emerald-500"
           type="email"
           required
           value={Regemail}
@@ -74,7 +74,7 @@ const Register = () => {
           placeholder="Enter Email"
         />
         <input
-          className="px-3 text-[#ffffff] py-3 mt-2 rounded-3xl text-xl bg-transparent border-2 outline-none placeholder:text-gray-200 border-emerald-500"
+          className="px-3 sm:px-5 lg:px-5 cl:px-5 py-2 sm:py-3 lg:py-3 xl:py-3 text-[#ffffff]mt-2 rounded-3xl text-xl bg-transparent border-2 outline-none placeholder:text-gray-200 border-emerald-500"
           type="password"
           required
           value={Regpassword}

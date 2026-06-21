@@ -34,10 +34,10 @@ const Login = () => {
         onSubmit={(e) => {
           loginFormSubmitted(e);
         }}
-        className="lg:w-[28vw] md:w-[25%] sm:w-[10vw]  flex flex-col gap-5 p-12 border-4 bg-[#2222] border-emerald-700 rounded-3xl "
+        className="w-[80%] sm:w-[10vw] xl:w-[28vw]  lg:w-[28vw] flex flex-col gap-5 p-4 sm:p-12 lg:p-12 xl:p-12 border-4 bg-[#2222] border-emerald-700 rounded-3xl "
       >
         <input
-          className="px-5 py-3 mt-2 rounded-3xl text-xl bg-transparent text-white border-2 outline-none placeholder:text-gray-200 border-emerald-500"
+          className="px-3 sm:px-5 lg:px-5 cl:px-5 py-2 sm:py-3 lg:py-3 xl:py-3 mt-2 rounded-3xl text-xl bg-transparent text-white border-2 outline-none placeholder:text-gray-200 border-emerald-500"
           type="name"
           value={loginemail}
           onChange={(e) => {
@@ -46,7 +46,7 @@ const Login = () => {
           placeholder="Enter Email"
         />
         <input
-          className="px-5 py-3 mt-2 rounded-3xl text-xl bg-transparent text-white border-2 outline-none placeholder:text-gray-200 border-emerald-500"
+          className="px-3 sm:px-5 lg:px-5 cl:px-5 py-2 sm:py-3 lg:py-3 xl:py-3 mt-2 rounded-3xl text-xl bg-transparent text-white border-2 outline-none placeholder:text-gray-200 border-emerald-500"
           type="name"
           value={loginpassword}
           onChange={(e) => {

@@ -30,7 +30,7 @@ const Dashboard = () => {
       <div>
         <Navbar />
 
-        <div className={Theam == "dark" ? "bg-[#1c1c1c]" : "bg-[#faf7f0]"}>
+        <div className={Theam == "dark" ? "bg-[#1c1c1c] " : "bg-[#faf7f0]"}>
           <div className=" flex flex-col items-center">
             <div className="  w-[92vw] pt-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
               <div className="rounded-3xl min-h-[120px] flex justify-center gap-2 text-2xl pl-9 flex-col bg-emerald-500">
@@ -62,11 +62,11 @@ const Dashboard = () => {
             <div
               className={
                 Theam == "dark"
-                  ? "text-[#fafafa]  w-[92vw] gap-5 mt-20"
-                  : "text-[#888780]  w-[92vw] gap-5 mt-20"
+                  ? "text-[#fafafa] min-h-[195px] w-[92vw] gap-5 mt-20"
+                  : "text-[#888780] min-h-[195px] w-[92vw] gap-5 mt-20"
               }
             >
-              <div className="pl-5">
+              <div className="pl-1 sm:pl-5 lg:pl-5 xl:pl-5">
                 <p className="mb-3  text-2xl">Your Recent videos </p>
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-items-center gap-4 ">
@@ -92,9 +92,66 @@ const Dashboard = () => {
                 style={{ display: recentlength == 0 ? "block" : "none" }}
                 className="w-[92vw] flex  gap-x-4 gap-y-5 gap-10"
               >
-                <p className="text-center text-[#a1a1aa] text-2xl pt-12">
+                <p className="text-center text-[#a1a1aa] text-[5vw] sm:text-2xl lg:text-2xl xl:text-2xl pt-12">
                   You have no any content. Click on +add content!
                 </p>
+              </div>
+            </div>
+
+            <div
+              className={
+                Theam == "dark"
+                  ? "bg-[#1c1c1c] pb-10 flex justify-center  "
+                  : "bg-[#faf7f0] pb-10 flex justify-center "
+              }
+            >
+              <div
+                className={
+                  Theam == "dark"
+                    ? "text-[#fafafa]  w-[92vw] gap-5 mt-10"
+                    : "text-[#888780]  w-[92vw] gap-5 mt-10"
+                }
+              >
+                <div className="pl-1 sm:pl-5 lg:pl-5 xl:pl-5">
+                  <p className="mb-3  text-2xl">Some Importent Contents </p>
+                </div>
+
+                <div
+                  className={
+                    Theam == "dark"
+                      ? " grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-items-center gap-4 "
+                      : " grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-items-center gap-4 "
+                  }
+                >
+                  {highpriorityshow.map((elem, idx) => {
+                    return (
+                      <RecentvideoCard
+                        idx={idx}
+                        title={elem.title}
+                        discription={elem.discription}
+                        cotegory={elem.cotegory}
+                        status={elem.status}
+                        instagram={elem.instagram}
+                        facebook={elem.facebook}
+                        youtube={elem.youtube}
+                        priority={elem.priority}
+                        date={elem.date}
+                      />
+                    );
+                  })}
+                </div>
+
+                <div
+                  style={{
+                    display: highprioritylength == 0 ? "block" : "none",
+                  }}
+                  className="w-full flex gap-x-4 gap-y-5 gap-10"
+                >
+                  <p className="w-[92vw] text-center text-[#a1a1aa] text-[5vw] sm:text-2xl lg:text-2xl xl:text-2xl pt-12">
+                    You have no any higher priority content. Click on +add
+                    content!
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -102,62 +159,6 @@ const Dashboard = () => {
       </div>
 
       {/* 22222222222222222222222222 Priority Card show page 222222222222222222222222222222222 */}
-
-      <div className="h-screen w-full ">
-        <div
-          className={
-            Theam == "dark"
-              ? "bg-[#1c1c1c] flex justify-center h-screen "
-              : "bg-[#faf7f0] flex justify-center h-screen"
-          }
-        >
-          <div
-            className={
-              Theam == "dark"
-                ? "text-[#fafafa]  w-[92vw] gap-5 mt-10"
-                : "text-[#888780]  w-[92vw] gap-5 mt-10"
-            }
-          >
-            <div className="pl-5">
-              <p className="mb-3  text-2xl">Some Importent Contents </p>
-            </div>
-
-            <div
-              className={
-                Theam == "dark"
-                  ? " grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-items-center gap-4 "
-                  : " grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-items-center gap-4 "
-              }
-            >
-              {highpriorityshow.map((elem, idx) => {
-                return (
-                  <RecentvideoCard
-                    idx={idx}
-                    title={elem.title}
-                    discription={elem.discription}
-                    cotegory={elem.cotegory}
-                    status={elem.status}
-                    instagram={elem.instagram}
-                    facebook={elem.facebook}
-                    youtube={elem.youtube}
-                    priority={elem.priority}
-                    date={elem.date}
-                  />
-                );
-              })}
-            </div>
-
-            <div
-              style={{ display: highprioritylength == 0 ? "block" : "none" }}
-              className="w-full flex gap-x-4 gap-y-5 gap-10"
-            >
-              <p className="w-[92vw] text-center text-[#a1a1aa] text-2xl pt-12">
-                You have no any higher priority content. Click on +add content!
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
   );
 };
