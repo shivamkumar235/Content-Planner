@@ -12,7 +12,7 @@ app.use(
   cors({
     origin: [
       "http://localhost:5173",
-      "content-planner-seven-gilt.vercel.app", // apna asli Vercel URL
+      "https://content-planner-seven-gilt.vercel.app",
     ],
     credentials: true,
   }),
