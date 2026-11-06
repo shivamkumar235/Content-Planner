@@ -10,12 +10,16 @@ const cookieParser = require("cookie-parser");
 const app = express();
 app.use(
   cors({
-    origin: "http://localhost:5173", // tumhare frontend ka URL
-    credentials: true, // cookie allow karne ke liye zaroori
+    origin: [
+      "http://localhost:5173",
+      "content-planner-seven-gilt.vercel.app", // apna asli Vercel URL
+    ],
+    credentials: true,
   }),
 );
 // app.use(cors());
 app.use(express.json());
+app.set("trust proxy", 1);
 app.use(cookieParser());
 
 app.use("/api/auth", authroutes);
